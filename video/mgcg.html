@@ -1,0 +1,27 @@
+<div id="playercontainer"></div>
+<script type="text/javascript" src="./player/cyberplayer.js"></script>
+<script type="text/javascript">
+    var player = cyberplayer("playercontainer").setup({
+        width: 884,
+        height: 481,
+        autostart: true,
+        stretching: "uniform",
+        volume: 100,
+        controls: true,
+        playlist: [
+            {
+                sources: [
+                    {
+                        file: "https://quiet-bar-6eb0.shenma.workers.dev/香港电影/猛鬼差馆/The.Haunted.Cop.Shop.1987.CHINESE.1080p.BluRay.x264.DTS-FGT.mkv", // 资源1 支持mp4, hls, flv等常用视频格式
+                        label: "高清" // 标签
+                    },
+                    {
+                        file: "https://quiet-bar-6eb0.shenma.workers.dev/香港电影/猛鬼差馆/The.Haunted.Cop.Shop.1987.CHINESE.1080p.BluRay.x264.DTS-FGT.mkv", // 资源2 必须与资源1格式和时长一致！
+                        label: "标清"
+                    }
+                ]
+            }
+        ],
+        ak: "88abcbd72fbc4b809dfe9e5bc97ad759" // 公有云平台注册即可获得accessKey
+    });
+</script>

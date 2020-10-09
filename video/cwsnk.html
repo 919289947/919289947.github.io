@@ -1,0 +1,27 @@
+<div id="playercontainer"></div>
+<script type="text/javascript" src="./player/cyberplayer.js"></script>
+<script type="text/javascript">
+    var player = cyberplayer("playercontainer").setup({
+        width: 884,
+        height: 481,
+        autostart: true,
+        stretching: "uniform",
+        volume: 100,
+        controls: true,
+        playlist: [
+            {
+                sources: [
+                    {
+                        file: "https://b.epang.ml/hls/7a88e1e0-3560-4d68-9dfb-e3b20fd220e0/playlist.m3u8", // 资源1 支持mp4, hls, flv等常用视频格式
+                        label: "高清" // 标签
+                    },
+                    {
+                        file: "https://b.epang.ml/hls/7a88e1e0-3560-4d68-9dfb-e3b20fd220e0/playlist.m3u8", // 资源2 必须与资源1格式和时长一致！
+                        label: "标清"
+                    }
+                ]
+            }
+        ],
+        ak: "88abcbd72fbc4b809dfe9e5bc97ad759" // 公有云平台注册即可获得accessKey
+    });
+</script>
