@@ -2,18 +2,26 @@
 <script type="text/javascript" src="./video/player/cyberplayer.js"></script>
 <script type="text/javascript">
     var player = cyberplayer("playercontainer").setup({
-        width: 680,
-        height: 448,
-        title: "flv点播",
-        file: "http://cyberplayer.bcelive.com/videoworks/mda-kbuhu4wqdi08dwix/cyberplayer/hls/cyberplayer-demo.m3u8", // hls播放地址（×一定要支持跨域访问，否则要设置primary参数）
-        image: "http://cyberplayer.bcelive.com/thumbnail.jpg", // 视频截图
+        width: 884,
+        height: 481,
         autostart: true,
         stretching: "uniform",
-        repeat: true,
         volume: 100,
         controls: true,
-        starttime: 0, 
-        // primary: "flash", // 强制使用flash来播放，不设置的话则默认高优使用H5进行播放
-        ak: "88abcbd72fbc4b809dfe9e5bc97ad759"
+        playlist: [
+            {
+                sources: [
+                    {
+                        file: "https://gitee.com/ys0477/dodo/raw/master/fuck/index.m3u8", // 资源1 支持mp4, hls, flv等常用视频格式
+                        label: "高清" // 标签
+                    },
+                    {
+                        file: "https://gitee.com/ys0477/dodo/raw/master/fuck/index.m3u8", // 资源2 必须与资源1格式和时长一致！
+                        label: "标清"
+                    }
+                ]
+            }
+        ],
+        ak: "88abcbd72fbc4b809dfe9e5bc97ad759" // 公有云平台注册即可获得accessKey
     });
 </script>
